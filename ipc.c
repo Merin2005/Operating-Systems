@@ -26,7 +26,9 @@ int main(int argc, char*argv[])
   {
     printf("Creating a new shared memory segment\n");
     printf("SHMID : %d\n",shmid);    
+    
   }
+ system("ipcs -m");
   if((segptr=(char*)shmat(shmid,0,0))==(char *)-1)
   {
     perror("shmat");
